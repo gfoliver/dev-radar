@@ -8,7 +8,7 @@ const app = express()
 mongoose.connect(credentials.databaseUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true
-});
+})
 
 app.use(express.json())
 
