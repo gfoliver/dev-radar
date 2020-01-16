@@ -19,10 +19,21 @@ module.exports = {
     
         const { github_username, techs, longitude, latitude } = req.body
 
+        if (! github_username || ! techs)
+            return res.json({
+                "status": false,
+                "message": "Missing Fields"
+            })
+
         let dev = await Dev.findOne({ github_username })
 
         if (! dev) {
             const apiResponse = await axios.get(`https://api.github.com/users/${github_username}`)
+                .catch(error => {
+                    if (error.response.status == 404) {
+                        return res.json({status: false, message: "Github user not found"})
+                    }
+                })
         
             const { name = login, avatar_url, bio } = apiResponse.data
         

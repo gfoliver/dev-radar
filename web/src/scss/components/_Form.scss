@@ -1,0 +1,16 @@
+.Form {
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    
+    label, input {
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 15px;
+    }
+}

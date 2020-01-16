@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+
+    &:focus,
+    &:active {
+        box-shadow: none !important;
+        outline: none !important;
+    }
+}
+
+html, body, #root {
+    width: 100%;
+    min-height: 100vh;
+
+    .App {
+        width: 100%;
+        min-height: 100vh;
+        background-color: $color-background;
+        padding: 30px 0;
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .DevsWrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 15px;
+
+            @media only screen and (max-width: 1200px) {
+                grid-template-columns: 1fr;
+            }
+
+            @media only screen and (max-width: 768px) {
+                margin-top: 30px;
+            }
+        }
+    }
+}
