@@ -1,3 +1,5 @@
+![dev-radar](https://repository-images.githubusercontent.com/233844824/b07a4900-6a30-11ea-9a6b-724b3e879e9a)
+
 # dev-radar
 
 An application to find devs near you based on the techs they work on
